@@ -38,7 +38,7 @@ foreach ($MSVoice as $mut) {
     $i++;
 }
 
-$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['AdminSystem'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
+$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['IksAdmin'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
 
 
 # Получение информации о мутах и гагах с уникальными элементами
