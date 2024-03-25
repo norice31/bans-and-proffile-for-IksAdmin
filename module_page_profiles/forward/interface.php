@@ -170,7 +170,7 @@
 				<a class="profile_head_menu_button <?php if ($page == 'stats') : ?>profile_head_menu_button_active<?php endif; ?>" href="<?= $General->arr_general['site'] . 'profiles/' . $profile . '/stats/' . $server_page ?>/">
 					<?= $Translate->get_translate_module_phrase('module_page_profiles', '_Stats'); ?>
 				</a>
-				<?php if (empty($ASAdmins['steamid']) != true) : ?>
+				<?php if (empty($ASAdmins['sid']) != true) : ?>
 					<a class="profile_head_menu_button <?php if ($page == 'admin') : ?>profile_head_menu_button_active<?php endif; ?>" href="<?= $General->arr_general['site'] . 'profiles/' . $profile . '/admin/' . $server_page ?>/">
 						<?= $Translate->get_translate_module_phrase('module_page_profiles', '_Admin'); ?>
 					</a>
