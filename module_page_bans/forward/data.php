@@ -28,15 +28,15 @@ $page_num = (int) intval ( get_section( 'num', '1' ) );
 $ban_type = [0 => '<div class="color-red">' . $Translate->get_translate_phrase('_Forever') . '</div>',1 => '<div class="color-blue">' . $Translate->get_translate_phrase('_Unban') . '</div>'];
 
 // Подсчёт кол-ва страниц
-$page_max = ceil($Db->queryNum('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['AdminSystem'][0]['DB_num'], "SELECT COUNT(*) FROM " . $Db->db_data['IksAdmin'][0]['Table'] . "bans ")[0]/PLAYERS_ON_PAGE);
+$page_max = ceil($Db->queryNum('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['IksAdmin'][0]['DB_num'], "SELECT COUNT(*) FROM " . $Db->db_data['IksAdmin'][0]['Table'] . "bans ")[0]/PLAYERS_ON_PAGE);
 
 $page_num_min = ($page_num - 1) * PLAYERS_ON_PAGE;
 
 
 // Запрос на получение информации о банах
-$res = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['AdminSystem'][0]['DB_num'], "SELECT `adminsid`, `sid`, `name`, `created`, `time`, `end`, `reason` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "bans` ORDER BY `created` DESC LIMIT {$page_num_min}," . PLAYERS_ON_PAGE . "");
+$res = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['IksAdmin'][0]['DB_num'], "SELECT `adminsid`, `sid`, `name`, `created`, `time`, `end`, `reason` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "bans` ORDER BY `created` DESC LIMIT {$page_num_min}," . PLAYERS_ON_PAGE . "");
 
-$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['AdminSystem'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
+$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['IksAdmin'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
 
 
 // Задаём заголовок страницы.
