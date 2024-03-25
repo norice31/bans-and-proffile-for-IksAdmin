@@ -1,0 +1,375 @@
+.bans_head {
+    padding: 19px 0px;
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr 3fr .5fr;
+    background-color: var(--bottom-line-table);
+    border-radius: 4px;
+    margin: 5px;
+    user-select: none;
+    justify-items: center;
+}
+
+.bans_head span {
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--custom-text-color);
+    display: flex;
+    align-items: center;
+}
+
+.bans_head svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--span-color);
+}
+
+.bans_list_body li {
+    height: 60px;
+    background: var(--bg-table-color);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr 3fr .5fr;
+    padding: 0;
+    margin-right: 5px;
+    margin-left: 6px;
+    transition: .3s;
+    position: relative;
+    justify-items: center;
+}
+
+.bans_list_body li:hover {
+    transition: .3s;
+    background-color: var(--bottom-line-table);
+}
+
+.bans_list_body li:not(:last-child) {
+    margin-bottom: 3px;
+}
+
+.bans_list_body li span {
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    color: var(--default-text-color);
+    z-index: 2;
+    align-items: center;
+}
+
+.bans_reason {
+    color: var(--custom-text-color) !important;
+    font-size: 10px !important;
+    transition: .3s;
+}
+
+.bans_admin {
+    background-color: var(--ct-color) !important;
+    font-weight: 700 !important;
+    font-size: 10px !important;
+    color: var(--bg-color) !important;
+    margin: 15px;
+    padding: 0 10px;
+    border-radius: 4px;
+    transition: .3s;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bans_admin svg {
+    width: 14px;
+    height: auto;
+    fill: var(--bg-color);
+    transition: .3s;
+}
+
+.bans_banned_user {
+    color: var(--default-text-color) !important;
+    font-weight: 700 !important;
+    transition: .3s;
+}
+
+.bans_date {
+    font-size: 10px !important;
+    color: var(--custom-text-color) !important;
+    transition: .3s;
+}
+
+.bans_list_body li:hover .bans_reason {
+    color: var(--default-text-color) !important;
+    transition: .3s;
+}
+
+.bans_list_body li:hover .bans_admin {
+    color: var(--default-text-color) !important;
+    transition: .3s;
+}
+
+.bans_list_body li:hover .bans_admin svg {
+    fill: var(--default-text-color);
+    transition: .3s;
+}
+
+.bans_list_body li:hover .bans_banned_user {
+    color: var(--span-color) !important;
+    transition: .3s;
+}
+
+ul.bans_list_body {
+    padding-bottom: 5px;
+}
+
+.block_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.block_bans_button,
+.block_comms_button {
+    display: flex;
+    background-color: var(--button-color);
+    color: var(--custom-text-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.block_bans_button:hover,
+.block_comms_button:hover {
+    background-color: var(--span-color);
+    color: var(--bg-color);
+    transition: .3s;
+}
+
+.block_active{
+    background-color: var(--span-color);
+    color: var(--bg-color);
+    transition: .3s;
+}
+
+@media (max-width:768px) {
+    .bans_admin {
+        display: none !important;
+    }
+
+    .bans_date {
+        display: none !important;
+    }
+
+    .bans_list_body li {
+        height: 60px;
+        background: var(--bg-table-color);
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: .5fr 1fr .3fr;
+        padding: 0;
+        margin-right: 5px;
+        margin-left: 6px;
+        transition: .3s;
+        position: relative;
+        justify-items: center;
+    }
+
+    .bans_head {
+        padding: 19px 0px;
+        display: grid;
+        grid-template-columns: .5fr 1fr .5fr;
+        background-color: var(--bottom-line-table);
+        border-radius: 4px;
+        margin: 5px;
+        user-select: none;
+        justify-items: center;
+    }
+
+    .bans_1 {
+        display: none !important;
+    }
+
+    .bans_banned_user {
+        color: var(--default-text-color) !important;
+        font-weight: 700 !important;
+        font-size: 10px !important;
+        transition: .3s;
+    }
+
+    .bans_reason {
+        display: inline !important;
+        color: var(--custom-text-color) !important;
+        font-size: 10px !important;
+        white-space: nowrap;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis !important;
+        transition: .3s;
+        margin: auto 0;
+        text-align: center;
+    }
+
+    .block_bans_button,
+    .block_comms_button {
+        display: flex;
+        background-color: var(--button-color);
+        color: var(--custom-text-color);
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 6px;
+        user-select: none;
+        -webkit-user-drag: none;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .block_active{
+        background-color: var(--span-color);
+        color: var(--bg-color);
+        transition: .3s;
+    }
+
+    .block_buttons {
+        display: flex;
+        gap: 5px;
+    }
+}
+
+.card_header{
+    display: flex;
+    background: var(--card-color);
+    border-radius: 6px;
+    padding: 10px;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+    align-items: center;
+}
+
+.svg_header {
+    background: var(--bottom-line-table);
+    border-radius: 6px;
+    padding: 5px;
+    width: 51px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg_header svg{
+    width: 35px;
+    height: 35px;
+    fill: var(--span-color);
+}
+
+.svg_text_header {
+    display: flex;
+}
+
+.flex_header_top {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 0 10px;
+}
+
+.flex_header_bottom {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--custom-text-color);
+    margin: 0 0 0 10px;
+}
+
+.flex_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 578px) {
+    .card_header{
+        display: flex;
+        background: var(--card-color);
+        border-radius: 6px;
+        padding: 10px;
+        justify-content: space-between;
+        margin: 0 0 10px 0;
+        align-items: center;
+    }
+
+    .svg_header {
+        background: var(--bottom-line-table);
+        border-radius: 4px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .svg_header svg{
+        width: 20px;
+        height: 20px;
+        fill: var(--span-color);
+    }
+    
+    .svg_text_header {
+        display: flex;
+        align-items: center;
+    }
+    
+    .flex_header_top {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 0 7px;
+    }
+    
+    .flex_header_bottom {
+        display: none;
+    }
+    
+    .flex_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.servers_wrap {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.servers_button {
+    padding: 12px 18px;
+    transition: .3s;
+    margin-right: 6px;
+    margin-bottom: 10px;
+    color: var(--custom-text-color);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background: var(--button-color);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.servers_button:hover {
+    color: var(--span-color);
+    background: var(--button-color-hover);
+}
+
+.server_buttons_active {
+    color: var(--span-color);
+    background: var(--button-color);
+}

@@ -1,0 +1,30 @@
+{
+    "_Bans_Admin": {
+        "EN": "Administrator",
+        "RU": "Администратор"	
+    },
+    "_Banned_User": {
+        "EN": "Banned user",
+        "RU": "Забаненный"	
+    },
+    "_Bans_Date": {
+        "EN": "Bans date",
+        "RU": "Дата бана"	
+    },
+    "_Bans_Reason": {
+        "EN": "Bans reason",
+        "RU": "Причина бана"	
+    },
+    "_Bans_GameBlock": {
+        "EN": "Game blocks",
+        "RU": "Игровые блокировки"	
+    },
+    "_Comms_GameBlock": {
+        "EN": "Communications block",
+        "RU": "Блокировки общения"	
+    },
+    "_Bans_Term": {
+        "EN": "Bans term",
+        "RU": "Срок бана"	
+    }
+}
