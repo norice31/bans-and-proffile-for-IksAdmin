@@ -78,7 +78,7 @@ switch($page){
   case 'stats':
   break;
   case 'admin':
-    if((!empty($ASAdmins['steamid']) != true)):
+    if((!empty($ASAdmins['sid']) != true)):
       get_iframe("ERROR", "Кажется, это не админ");
     endif;
     $Admins = $Player->get_db_Admins();
