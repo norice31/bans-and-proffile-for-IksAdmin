@@ -804,8 +804,9 @@ class Player
             `iks_admins`.`flags`,
             `iks_admins`.`immunity`,
             `iks_admins`.`end`,
-            ( SELECT COUNT(1) FROM `iks_bans` WHERE `adminsid`=`iks_admins`.`sid` ) AS `bans_count`
-            FROM `iks_admins` WHERE `iks_admins`.`sid` LIKE '%".$this->get_steam_64()."%'");
+            ( SELECT COUNT(1) FROM `iks_bans` WHERE `adminsid`=`iks_admins`.`sid` ) AS `bans_count`,
+            ( SELECT COUNT(1) FROM `iks_mutes` WHERE `adminsid`=`iks_admins`.`sid` ) AS `comms_count`
+            FROM `iks_admins` WHERE `sid` LIKE ".$this->get_steam_64());
         }
     }
 
