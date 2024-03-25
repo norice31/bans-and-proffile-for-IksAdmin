@@ -67,7 +67,7 @@ $SBComms = $Player->get_db_ASComms();
 $Settings = $Player->get_profile_settings();
 $Info = $Player->get_info();
 $back = empty($Info['background']) ? $Settings['backs']['1'] : $Settings['backs'][$Info['background']];
-$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['AdminSystem'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
+$adminlist = $Db->queryAll('IksAdmin', $Db->db_data['IksAdmin'][0]['USER_ID'], $Db->db_data['IksAdmin'][0]['DB_num'], "SELECT `sid`, `name` FROM `" . $Db->db_data['IksAdmin'][0]['Table'] . "admins`");
 
 switch($page){
   case 'info':
